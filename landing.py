@@ -68,7 +68,7 @@ def get_openAI_key():
 # Load Dashboard after login
 if st.session_state.get("logged_in"):
 
-    openai_key = st.session_state.get("openAI_key")
+    # openai_key = st.session_state.get("openAI_key")
 
     import loan_assistant
     
