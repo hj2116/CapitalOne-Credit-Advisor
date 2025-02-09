@@ -61,18 +61,21 @@ if not st.session_state["logged_in"]:
             st.rerun() 
         else:
             st.error("Invalid username or password")
-
-def get_openAI_key():
-    return openAIKey
+else:
+    with open("test.py", encoding="utf-8") as f:
+            code = f.read()
+            exec(code)
+# def get_openAI_key():
+#     return openAIKey
 
 # Load Dashboard after login
-if st.session_state.get("logged_in"):
+# if st.session_state.get("logged_in"):
 
-    # openai_key = st.session_state.get("openAI_key")
+#     openai_key = st.session_state.get("openAI_key")
 
-    import loan_assistant
+#     import loan_assistant
     
-    with open("test.py", encoding="utf-8") as f:
-        code = f.read()
-        exec(code)
+#     with open("test.py", encoding="utf-8") as f:
+#         code = f.read()
+#         exec(code)
 
