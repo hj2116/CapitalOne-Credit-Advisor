@@ -62,6 +62,7 @@ if not st.session_state["logged_in"]:
         else:
             st.error("Invalid username or password")
 else:
+    openai_key = st.session_state.get("openAI_key")
     with open("test.py", encoding="utf-8") as f:
             code = f.read()
             exec(code)
