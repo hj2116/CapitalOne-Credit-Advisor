@@ -54,10 +54,8 @@ if not st.session_state["logged_in"]:
 
             # Store IDs and OpenAI API key in session state
             st.session_state["customer_id"] = username
-            if openAIKey:
+            if openAIKey != None:
                 st.session_state["openAI_key"] = openAIKey
-                
-                
                 
             # Reload to transition to the dashboard
             st.rerun() 
