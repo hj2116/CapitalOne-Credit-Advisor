@@ -3,7 +3,6 @@ import pandas as pd
 import requests
 import os
 from dotenv import load_dotenv
-import loan_assistant
 
 # 📌 Load API Key
 load_dotenv()
@@ -56,6 +55,7 @@ if not st.session_state["logged_in"]:
             # Store IDs and OpenAI API key in session state
             st.session_state["customer_id"] = username
             if openAIKey:
+                import loan_assistant
                 st.session_state["openAI_key"] = openAIKey
                 
             # Reload to transition to the dashboard

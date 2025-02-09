@@ -4,7 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 
 # ✅ Load environment variables (API keys)
-load_dotenv()
+# load_dotenv()
 openai.api_key = st.session_state.get("openAI_key")
 
 # ✅ If API key is missing, show a warning but do not stop execution
