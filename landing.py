@@ -42,10 +42,10 @@ if not st.session_state["logged_in"]:
         unsafe_allow_html=True
     )
 
-    username = st.text_input("Capital One ID")
+    username = st.text_input("Capital One ID", placeholder = CUSTOMER_ID[0])
     password = st.text_input("Password", type="password")
     aiText = "Optional: You can enable the Financial Advisor Chatbot with your OpenAI API Key"
-    openAIKey = st.text_input("OpenAI API Key", placeholder=aiText)
+    openAIKey = st.text_input("OpenAI API Key", placeholder = aiText)
 
     if st.button("Sign in"):
         if check_credentials(username, password):
