@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 import os
 from dotenv import load_dotenv
+import loan_assistant
 
 # 📌 Load API Key
 load_dotenv()
@@ -45,7 +46,7 @@ if not st.session_state["logged_in"]:
     username = st.text_input("Capital One ID", value = CUSTOMER_ID[0])
     password = st.text_input("Password", type="password", value = "********")
     aiText = "Optional: You can enable the Financial Advisor Chatbot with your OpenAI API Key"
-    openAIKey = st.text_input("OpenAI API Key", placeholder = aiText)
+    openAIKey = st.text_input("OpenAI API Key", type="password", placeholder = aiText)
 
     if st.button("Sign in"):
         if check_credentials(username, password):
