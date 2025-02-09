@@ -54,7 +54,7 @@ if not st.session_state["logged_in"]:
 
             # Store IDs and OpenAI API key in session state
             st.session_state["customer_id"] = username
-            if openAIKey != None:
+            if openAIKey:
                 st.session_state["openAI_key"] = openAIKey
                 
             # Reload to transition to the dashboard
@@ -62,7 +62,8 @@ if not st.session_state["logged_in"]:
         else:
             st.error("Invalid username or password")
 else:
-    openai_key = st.session_state.get("openAI_key")
+    # import loan_assistant
+    # openai_key = st.session_state.get("openAI_key")
     with open("test.py", encoding="utf-8") as f:
             code = f.read()
             exec(code)
